@@ -1,0 +1,126 @@
+
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Stafford EMS Transport{% endblock %}
+
+{% block content %}
+<section class="py-5 mt-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">Contact Stafford EMS Transport</h1>
+            <p class="lead">Get in touch with us for medical transport services or general inquiries</p>
+        </div>
+
+        <div class="row g-5">
+            <!-- Contact Information -->
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-lg h-100">
+                    <div class="card-body p-5">
+                        <h2 class="fw-bold mb-4">
+                            <i class="fas fa-info-circle text-primary me-2"></i>Contact Information
+                        </h2>
+                        
+                        <div class="mb-4">
+                            <h5 class="fw-bold">
+                                <i class="fas fa-map-marker-alt text-primary me-2"></i>Address
+                            </h5>
+                            <p class="ms-4">11104 W Airport Blvd ste 116<br>Stafford, TX 77477</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h5 class="fw-bold">
+                                <i class="fas fa-phone text-primary me-2"></i>Phone
+                            </h5>
+                            <p class="ms-4">
+                                <a href="tel:281-690-1274" class="text-decoration-none">281-690-1274</a>
+                            </p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h5 class="fw-bold">
+                                <i class="fas fa-clock text-primary me-2"></i>Hours of Operation
+                            </h5>
+                            <p class="ms-4">
+                                <strong>Emergency Services:</strong> 24/7<br>
+                                <strong>Non-Emergency Scheduling:</strong><br>
+                                Monday - Friday: 8:00 AM - 6:00 PM<br>
+                                Saturday: 9:00 AM - 4:00 PM<br>
+                                Sunday: Emergency Only
+                            </p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h5 class="fw-bold">
+                                <i class="fas fa-ambulance text-primary me-2"></i>Service Areas
+                            </h5>
+                            <p class="ms-4">
+                                Stafford, Houston, Sugar Land, Missouri City, Pearland, Katy, Richmond, Bellaire, and surrounding areas in Greater Houston
+                            </p>
+                        </div>
+
+                        <!-- Quick Action Buttons -->
+                        <div class="d-grid gap-2">
+                            <a href="tel:281-690-1274" class="btn btn-danger btn-lg">
+                                <i class="fas fa-phone me-2"></i>Call for Emergency
+                            </a>
+                            <a href="{{ url_for('booking') }}" class="btn btn-primary btn-lg">
+                                <i class="fas fa-calendar-plus me-2"></i>Schedule Transport
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-lg h-100">
+                    <div class="card-body p-0">
+                        <div class="p-4 bg-primary text-white">
+                            <h2 class="fw-bold mb-0">
+                                <i class="fas fa-map text-white me-2"></i>Our Location
+                            </h2>
+                        </div>
+                        <div style="height: 450px;">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.8742851977743!2d-95.5613684!3d29.6413982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640e8b3b4f84e7b%3A0x1234567890abcdef!2s11104%20W%20Airport%20Blvd%20%23116%2C%20Stafford%2C%20TX%2077477!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="bg-light p-5 rounded">
+                    <h2 class="fw-bold text-center mb-4">Important Information</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4 text-center">
+                            <i class="fas fa-exclamation-triangle text-danger mb-3" style="font-size: 48px;"></i>
+                            <h5>Emergencies</h5>
+                            <p>For life-threatening emergencies, call 911 first, then contact us for transport coordination.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="fas fa-insurance text-primary mb-3" style="font-size: 48px;"></i>
+                            <h5>Insurance</h5>
+                            <p>We accept most major insurance plans. Please have your insurance card ready when scheduling.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="fas fa-calendar-check text-success mb-3" style="font-size: 48px;"></i>
+                            <h5>Scheduling</h5>
+                            <p>Non-emergency transports should be scheduled at least 24 hours in advance when possible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

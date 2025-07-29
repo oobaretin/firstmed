@@ -1,0 +1,143 @@
+
+{% extends "base.html" %}
+
+{% block title %}Book Transport - Stafford EMS Transport{% endblock %}
+
+{% block content %}
+<section class="py-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="text-center mb-5">
+                    <h1 class="fw-bold">Request Medical Transport</h1>
+                    <p class="lead">Fill out the form below to request medical transportation services</p>
+                </div>
+
+                <div class="card shadow-lg border-0">
+                    <div class="card-body p-5">
+                        <form method="POST">
+                            <div class="row g-3">
+                                <!-- Patient Information -->
+                                <div class="col-12">
+                                    <h4 class="fw-bold text-primary mb-3">
+                                        <i class="fas fa-user me-2"></i>Patient Information
+                                    </h4>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone Number *</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email">
+                                </div>
+
+                                <!-- Transport Details -->
+                                <div class="col-12 mt-4">
+                                    <h4 class="fw-bold text-primary mb-3">
+                                        <i class="fas fa-ambulance me-2"></i>Transport Details
+                                    </h4>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="service_type" class="form-label">Service Type *</label>
+                                    <select class="form-select" id="service_type" name="service_type" required>
+                                        <option value="">Select Service Type</option>
+                                        <option value="emergency">Emergency Transport</option>
+                                        <option value="non-emergency">Non-Emergency Transport</option>
+                                        <option value="dialysis">Dialysis Transport</option>
+                                        <option value="appointment">Medical Appointment</option>
+                                        <option value="discharge">Hospital Discharge</option>
+                                        <option value="inter-facility">Inter-Facility Transfer</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="date" class="form-label">Preferred Date *</label>
+                                    <input type="date" class="form-control" id="date" name="date" required>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="time" class="form-label">Preferred Time *</label>
+                                    <input type="time" class="form-control" id="time" name="time" required>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="pickup_location" class="form-label">Pickup Location *</label>
+                                    <textarea class="form-control" id="pickup_location" name="pickup_location" rows="2" placeholder="Enter complete pickup address" required></textarea>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="destination" class="form-label">Destination *</label>
+                                    <textarea class="form-control" id="destination" name="destination" rows="2" placeholder="Enter complete destination address" required></textarea>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="notes" class="form-label">Special Requirements / Medical Notes</label>
+                                    <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="Please include any special medical requirements, mobility assistance needed, or other important information"></textarea>
+                                </div>
+
+                                <!-- Emergency Contact -->
+                                <div class="col-12 mt-4">
+                                    <div class="alert alert-info">
+                                        <h5 class="alert-heading">
+                                            <i class="fas fa-info-circle me-2"></i>Important Information
+                                        </h5>
+                                        <ul class="mb-0">
+                                            <li>For emergency situations, please call 911 or our emergency line: <strong>281-690-1274</strong></li>
+                                            <li>Non-emergency transports should be scheduled at least 24 hours in advance</li>
+                                            <li>Please have insurance information and any required medical documentation ready</li>
+                                            <li>Our team will contact you within 2 hours to confirm your booking</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-paper-plane me-2"></i>Submit Transport Request
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Quick Contact -->
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <div class="card bg-danger text-white h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-exclamation-triangle mb-3" style="font-size: 48px;"></i>
+                                <h5>Emergency?</h5>
+                                <p>For immediate emergency transport, call us now!</p>
+                                <a href="tel:281-690-1274" class="btn btn-light btn-lg">
+                                    <i class="fas fa-phone me-2"></i>281-690-1274
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-primary text-white h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-question-circle mb-3" style="font-size: 48px;"></i>
+                                <h5>Have Questions?</h5>
+                                <p>Need help or have questions about our services?</p>
+                                <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">
+                                    <i class="fas fa-envelope me-2"></i>Contact Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
