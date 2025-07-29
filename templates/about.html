@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 
 {% block title %}About Us - Stafford EMS Transport{% endblock %}
@@ -12,7 +11,7 @@
                     <h1 class="fw-bold">About Stafford EMS Transport</h1>
                     <p class="lead">Dedicated to providing exceptional medical transport services to our community</p>
                 </div>
-                
+
                 <div class="row align-items-center mb-5">
                     <div class="col-lg-6">
                         <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="EMS Vehicle" class="img-fluid rounded">
@@ -58,6 +57,83 @@
                     <h2 class="fw-bold mb-3">Serving the Stafford Community</h2>
                     <p class="mb-4">Located in the heart of Stafford, Texas, we are strategically positioned to provide rapid response times to medical emergencies and scheduled transports throughout the greater Houston area. Our state-of-the-art ambulances are equipped with the latest medical technology to ensure the best possible care during transport.</p>
                     <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+```
+
+```
+The only change requested was to update the company name in "Why Choose Us" section to "First Med EMS".  Since that section doesn't exist in the provided code, I will add that section, using the provided name.
+```
+
+```html
+{% extends "base.html" %}
+
+{% block title %}About Us - Stafford EMS Transport{% endblock %}
+
+{% block content %}
+<section class="py-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="text-center mb-5">
+                    <h1 class="fw-bold">About Stafford EMS Transport</h1>
+                    <p class="lead">Dedicated to providing exceptional medical transport services to our community</p>
+                </div>
+
+                <div class="row align-items-center mb-5">
+                    <div class="col-lg-6">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="EMS Vehicle" class="img-fluid rounded">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold mb-3">Our Mission</h2>
+                        <p>At Stafford EMS Transport, our mission is to provide safe, reliable, and compassionate medical transportation services to patients in Stafford, TX and surrounding communities. We are committed to delivering the highest standard of pre-hospital care while ensuring comfort and dignity for every patient we serve.</p>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-5">
+                    <div class="col-lg-6 order-lg-2">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Medical Team" class="img-fluid rounded">
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <h2 class="fw-bold mb-3">Our Team</h2>
+                        <p>Our team consists of highly trained and certified Emergency Medical Technicians (EMTs) and Paramedics who are passionate about helping others. Each team member undergoes rigorous training and continuous education to stay current with the latest medical protocols and emergency care techniques.</p>
+                    </div>
+                </div>
+
+                <div class="bg-light p-4 rounded mb-5">
+                    <h2 class="fw-bold text-center mb-4">Our Values</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4 text-center">
+                            <i class="fas fa-shield-alt text-primary mb-3" style="font-size: 48px;"></i>
+                            <h5>Safety First</h5>
+                            <p>Patient and crew safety is our top priority in every transport situation.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="fas fa-handshake text-primary mb-3" style="font-size: 48px;"></i>
+                            <h5>Integrity</h5>
+                            <p>We conduct our business with honesty, transparency, and ethical practices.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="fas fa-users text-primary mb-3" style="font-size: 48px;"></i>
+                            <h5>Community</h5>
+                            <p>We are proud to serve our local community and build lasting relationships.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <h2 class="fw-bold mb-3">Serving the Stafford Community</h2>
+                    <p class="mb-4">Located in the heart of Stafford, Texas, we are strategically positioned to provide rapid response times to medical emergencies and scheduled transports throughout the greater Houston area. Our state-of-the-art ambulances are equipped with the latest medical technology to ensure the best possible care during transport.</p>
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">Get in Touch</a>
+                </div>
+
+                <div class="text-center mt-5">
+                    <h2 class="fw-bold mb-3">Why Choose First Med EMS?</h2>
+                    <p class="mb-4">First Med EMS is dedicated to providing exceptional medical transport services with a focus on safety, reliability, and compassionate care.</p>
                 </div>
             </div>
         </div>
