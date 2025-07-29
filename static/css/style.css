@@ -21,10 +21,7 @@ body {
     min-height: 100vh;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: linear-gradient(135deg, #0d6efd 0%, #0056b3 100%);
     color: white;
 }
 
