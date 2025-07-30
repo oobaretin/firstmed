@@ -3,15 +3,8 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 import smtplib
 import os
 from datetime import datetime
-try:
-    from email.mime.text import MimeText
-    from email.mime.multipart import MimeMultipart
-except ImportError:
-    # Fallback for systems with email import issues
-    import email.mime.text as mime_text
-    import email.mime.multipart as mime_multipart
-    MimeText = mime_text.MimeText
-    MimeMultipart = mime_multipart.MimeMultipart
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 app = Flask(__name__)
 app.secret_key = 'your-secret-key-here'
@@ -30,7 +23,7 @@ def send_booking_email(booking_data):
             return False
         
         # Create message
-        msg = MimeMultipart('alternative')
+        msg = MIMEMultipart('alternative')
         msg['Subject'] = f"New Transport Request - {booking_data['name']}"
         msg['From'] = sender_email
         msg['To'] = sender_email
@@ -135,8 +128,8 @@ def send_booking_email(booking_data):
         """
         
         # Attach parts
-        html_part = MimeText(html_content, 'html')
-        text_part = MimeText(text_content, 'plain')
+        html_part = MIMEText(html_content, 'html')
+        text_part = MIMEText(text_content, 'plain')
         
         msg.attach(text_part)
         msg.attach(html_part)
