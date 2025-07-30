@@ -2,9 +2,16 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 import smtplib
 import os
-from email.mime.text import MimeText
-from email.mime.multipart import MimeMultipart
 from datetime import datetime
+try:
+    from email.mime.text import MimeText
+    from email.mime.multipart import MimeMultipart
+except ImportError:
+    # Fallback for systems with email import issues
+    import email.mime.text as mime_text
+    import email.mime.multipart as mime_multipart
+    MimeText = mime_text.MimeText
+    MimeMultipart = mime_multipart.MimeMultipart
 
 app = Flask(__name__)
 app.secret_key = 'your-secret-key-here'
