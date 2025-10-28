@@ -1,130 +1,210 @@
-
 {% extends "base.html" %}
 
 {% block title %}Contact Us - First Med Care EMS{% endblock %}
 
 {% block content %}
-<section class="py-5 mt-5">
+<!-- Page Header -->
+<section class="hero-section" style="padding: 80px 0;">
     <div class="container">
-        <div class="text-center mb-5">
-            <h1 class="fw-bold">Contact First Med Care EMS</h1>
-            <p class="lead">Get in touch with us for medical transport services or general inquiries</p>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold">Contact Us</h1>
+                <p class="lead">Get in touch with our medical transport team</p>
+            </div>
         </div>
+    </div>
+</section>
 
+<!-- Contact Information -->
+<section class="section-padding">
+    <div class="container">
         <div class="row g-5">
-            <!-- Contact Information -->
+            <!-- Contact Details -->
             <div class="col-lg-6">
-                <div class="card border-0 shadow-lg h-100">
-                    <div class="card-body p-5">
-                        <h2 class="fw-bold mb-4">
-                            <i class="fas fa-info-circle text-primary me-2"></i>Contact Information
-                        </h2>
-                        
-                        <div class="mb-4">
-                            <h5 class="fw-bold">
-                                <i class="fas fa-map-marker-alt text-primary me-2"></i>Address
-                            </h5>
-                            <p class="ms-4">11104 W Airport Blvd ste 138<br>Stafford, TX 77477</p>
+                <h2 class="display-6 fw-bold mb-4">Get In Touch</h2>
+                <p class="lead mb-5">We're here to help with all your medical transportation needs. Contact us anytime!</p>
+                
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-phone text-primary fs-2"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Emergency Line</h5>
+                                <p class="mb-1"><strong>(555) 123-4567</strong></p>
+                                <small class="text-muted">Available 24/7 for emergencies</small>
+                            </div>
                         </div>
-                        
-                        <div class="mb-4">
-                            <h5 class="fw-bold">
-                                <i class="fas fa-phone text-primary me-2"></i>Phone
-                            </h5>
-                            <p class="ms-4">
-                                <a href="tel:281-690-1274" class="text-decoration-none">281-690-1274</a>
-                            </p>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-phone text-primary fs-2"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Business Line</h5>
+                                <p class="mb-1"><strong>(555) 123-4568</strong></p>
+                                <small class="text-muted">For non-emergency bookings</small>
+                            </div>
                         </div>
-                        
-                        <div class="mb-4">
-                            <h5 class="fw-bold">
-                                <i class="fas fa-envelope text-primary me-2"></i>Email
-                            </h5>
-                            <p class="ms-4">
-                                <a href="mailto:24hourserviceems@gmail.com" class="text-decoration-none">24hourserviceems@gmail.com</a>
-                            </p>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-envelope text-primary fs-2"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Email</h5>
+                                <p class="mb-1"><strong>info@firstmedcareems.com</strong></p>
+                                <small class="text-muted">Response within 2 hours</small>
+                            </div>
                         </div>
-                        
-                        <div class="mb-4">
-                            <h5 class="fw-bold">
-                                <i class="fas fa-clock text-primary me-2"></i>Hours of Operation
-                            </h5>
-                            <p class="ms-4">
-                                <strong>Emergency Services:</strong> 24/7<br>
-                                <strong>Non-Emergency Scheduling:</strong><br>
-                                Monday - Friday: 8:00 AM - 6:00 PM<br>
-                                Saturday: 9:00 AM - 4:00 PM<br>
-                                Sunday: Emergency Only
-                            </p>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-primary fs-2"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Address</h5>
+                                <p class="mb-1">
+                                    <strong>123 Medical Center Drive<br>
+                                    Suite 100<br>
+                                    City, State 12345</strong>
+                                </p>
+                                <small class="text-muted">Visit our headquarters</small>
+                            </div>
                         </div>
-                        
-                        <div class="mb-4">
-                            <h5 class="fw-bold">
-                                <i class="fas fa-ambulance text-primary me-2"></i>Service Areas
-                            </h5>
-                            <p class="ms-4">
-                                Stafford, Houston, Sugar Land, Missouri City, Pearland, Katy, Richmond, Bellaire, and surrounding areas in Greater Houston
-                            </p>
-                        </div>
-
-                        <!-- Quick Action Buttons -->
-                        <div class="d-grid gap-2">
-                            <a href="tel:281-690-1274" class="btn btn-danger btn-lg">
-                                <i class="fas fa-phone me-2"></i>Call for Emergency
-                            </a>
-                            <a href="{{ url_for('booking') }}" class="btn btn-primary btn-lg">
-                                <i class="fas fa-calendar-plus me-2"></i>Schedule Transport
-                            </a>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-clock text-primary fs-2"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Hours</h5>
+                                <p class="mb-1">
+                                    <strong>Emergency Services: 24/7<br>
+                                    Business Office: Mon-Fri 8AM-6PM<br>
+                                    Weekend: Sat-Sun 9AM-5PM</strong>
+                                </p>
+                                <small class="text-muted">Always available for emergencies</small>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Google Map -->
+            
+            <!-- Contact Form -->
             <div class="col-lg-6">
-                <div class="card border-0 shadow-lg h-100">
-                    <div class="card-body p-0">
-                        <div class="p-4 bg-primary text-white">
-                            <h2 class="fw-bold mb-0">
-                                <i class="fas fa-map text-white me-2"></i>Our Location
-                            </h2>
-                        </div>
-                        <div style="height: 450px;">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.8742851977743!2d-95.5613684!3d29.6413982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640e8b3b4f84e7b%3A0x1234567890abcdef!2s11104%20W%20Airport%20Blvd%20%23138%2C%20Stafford%2C%20TX%2077477!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
-                                width="100%" 
-                                height="100%" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
+                <div class="card shadow-lg border-0">
+                    <div class="card-body p-5">
+                        <h3 class="card-title mb-4">Send Us a Message</h3>
+                        <p class="text-muted mb-4">Have questions or need to schedule transport? Send us a message!</p>
+                        
+                        <form action="{{ url_for('submit_booking') }}" method="POST" data-ajax>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="phone" class="form-label">Phone Number *</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="service_type" class="form-label">Service Type</label>
+                                    <select class="form-select" id="service_type" name="service_type">
+                                        <option value="">Select Service Type</option>
+                                        <option value="Emergency Transport">Emergency Transport</option>
+                                        <option value="Non-Emergency Transport">Non-Emergency Transport</option>
+                                        <option value="Critical Care Transport">Critical Care Transport</option>
+                                        <option value="Wheelchair Transport">Wheelchair Transport</option>
+                                        <option value="General Inquiry">General Inquiry</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="pickup_location" class="form-label">Pickup Location</label>
+                                    <input type="text" class="form-control" id="pickup_location" name="pickup_location" 
+                                           placeholder="Street address, city, state, zip">
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="destination" class="form-label">Destination</label>
+                                    <input type="text" class="form-control" id="destination" name="destination" 
+                                           placeholder="Hospital, clinic, or address">
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message *</label>
+                                    <textarea class="form-control" id="message" name="message" rows="4" 
+                                              placeholder="Please describe your transportation needs or any questions you have..." required></textarea>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-primary btn-lg">
+                                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <!-- Additional Information -->
-        <div class="row mt-5">
+<!-- Emergency Notice -->
+<section class="section-padding bg-danger text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-5 fw-bold mb-3">
+                    <i class="fas fa-exclamation-triangle me-3"></i>
+                    Medical Emergency?
+                </h2>
+                <p class="lead mb-4">If this is a medical emergency, please call 911 or our emergency line immediately</p>
+                <a href="tel:555-123-4567" class="btn btn-light btn-lg">
+                    <i class="fas fa-phone me-2"></i>Call (555) 123-4567
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center mb-5">
+                <h2 class="display-5 fw-bold">Find Us</h2>
+                <p class="lead">Visit our headquarters or contact us for service in your area</p>
+            </div>
+        </div>
+        
+        <div class="row">
             <div class="col-12">
-                <div class="bg-light p-5 rounded">
-                    <h2 class="fw-bold text-center mb-4">Important Information</h2>
-                    <div class="row g-4">
-                        <div class="col-md-4 text-center">
-                            <i class="fas fa-exclamation-triangle text-danger mb-3" style="font-size: 48px;"></i>
-                            <h5>Emergencies</h5>
-                            <p>For life-threatening emergencies, call 911 first, then contact us for transport coordination.</p>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <i class="fas fa-insurance text-primary mb-3" style="font-size: 48px;"></i>
-                            <h5>Insurance</h5>
-                            <p>We accept most major insurance plans. Please have your insurance card ready when scheduling.</p>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <i class="fas fa-calendar-check text-success mb-3" style="font-size: 48px;"></i>
-                            <h5>Scheduling</h5>
-                            <p>Non-emergency transports should be scheduled at least 24 hours in advance when possible.</p>
+                <div class="card border-0 shadow">
+                    <div class="card-body p-0">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368459418!3d40.71312997932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2s150%20Park%20Row%2C%20New%20York%2C%20NY%2010007!5e0!3m2!1sen!2sus!4v1625073982878!5m2!1sen!2sus" 
+                                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>

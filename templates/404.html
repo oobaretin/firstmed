@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found - First Med Care EMS{% endblock %}
+
+{% block content %}
+<section class="section-padding" style="padding: 120px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <i class="fas fa-ambulance text-primary" style="font-size: 8rem;"></i>
+                <h1 class="display-1 fw-bold text-primary mb-4">404</h1>
+                <h2 class="display-5 fw-bold mb-4">Page Not Found</h2>
+                <p class="lead mb-5">Sorry, the page you're looking for doesn't exist or has been moved.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="{{ url_for('home') }}" class="btn btn-primary btn-lg">
+                        <i class="fas fa-home me-2"></i>Go Home
+                    </a>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-phone me-2"></i>Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

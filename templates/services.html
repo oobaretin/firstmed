@@ -1,163 +1,182 @@
 {% extends "base.html" %}
 
-{% block title %}Services - First Med Care EMS{% endblock %}
+{% block title %}Our Services - First Med Care EMS{% endblock %}
 
 {% block content %}
-<section class="py-5 mt-5">
+<!-- Page Header -->
+<section class="hero-section" style="padding: 80px 0;">
     <div class="container">
-        <div class="text-center mb-5">
-            <h1 class="fw-bold">Our Medical Transport Services</h1>
-            <p class="lead">Comprehensive emergency and non-emergency medical transportation solutions</p>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold">Our Services</h1>
+                <p class="lead">Comprehensive medical transportation solutions</p>
+            </div>
         </div>
+    </div>
+</section>
 
-        <!-- Emergency Services -->
-        <div class="row mb-5">
-            <div class="col-lg-8 mx-auto">
-                <div class="card border-0 shadow-lg">
+<!-- Services Overview -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Emergency Transport -->
+            <div class="col-lg-6">
+                <div class="card h-100 border-0 shadow-lg">
                     <div class="card-body p-5">
                         <div class="text-center mb-4">
-                            <i class="fas fa-ambulance text-danger" style="font-size: 64px;"></i>
-                            <h2 class="fw-bold text-danger mt-3">Emergency Medical Services</h2>
+                            <i class="fas fa-ambulance text-danger fs-1"></i>
                         </div>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <h5><i class="fas fa-heartbeat text-danger me-2"></i>Advanced Life Support (ALS)</h5>
-                                <p>Critical care transport with paramedics trained in advanced cardiac life support, medication administration, and advanced airway management.</p>
-                            </div>
-                            <div class="col-md-6">
-                                <h5><i class="fas fa-first-aid text-danger me-2"></i>Basic Life Support (BLS)</h5>
-                                <p>Emergency medical care including CPR, basic airway management, automated external defibrillation, and patient stabilization.</p>
-                            </div>
-                            <div class="col-md-6">
-                                <h5><i class="fas fa-clock text-danger me-2"></i>24/7 Emergency Response</h5>
-                                <p>Round-the-clock emergency response with rapid deployment and GPS-tracked ambulances for fastest response times.</p>
-                            </div>
-                            <div class="col-md-6">
-                                <h5><i class="fas fa-hospital text-danger me-2"></i>Inter-Facility Transport</h5>
-                                <p>Critical care transport between hospitals and medical facilities with continuous monitoring and advanced medical equipment.</p>
-                            </div>
+                        <h3 class="card-title text-center mb-4">Emergency Transport</h3>
+                        <p class="card-text mb-4">24/7 emergency medical transportation with fully equipped ambulances and trained paramedics ready to respond to critical situations.</p>
+                        
+                        <h5>Features:</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Advanced Life Support (ALS)</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Cardiac Monitoring</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Oxygen Therapy</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Emergency Medications</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Rapid Response</li>
+                        </ul>
+                        
+                        <div class="text-center mt-4">
+                            <span class="badge bg-danger fs-6">24/7 Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Non-Emergency Transport -->
+            <div class="col-lg-6">
+                <div class="card h-100 border-0 shadow-lg">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-wheelchair text-primary fs-1"></i>
+                        </div>
+                        <h3 class="card-title text-center mb-4">Non-Emergency Transport</h3>
+                        <p class="card-text mb-4">Safe and comfortable transportation for medical appointments, dialysis treatments, and other healthcare needs.</p>
+                        
+                        <h5>Features:</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Wheelchair Accessible</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Stretcher Transport</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Comfortable Seating</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Climate Control</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Professional Drivers</li>
+                        </ul>
+                        
+                        <div class="text-center mt-4">
+                            <span class="badge bg-primary fs-6">Scheduled Service</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Critical Care Transport -->
+            <div class="col-lg-6">
+                <div class="card h-100 border-0 shadow-lg">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-heartbeat text-warning fs-1"></i>
+                        </div>
+                        <h3 class="card-title text-center mb-4">Critical Care Transport</h3>
+                        <p class="card-text mb-4">Specialized transport for patients requiring intensive care during transportation, including ventilator support and continuous monitoring.</p>
+                        
+                        <h5>Features:</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Ventilator Support</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Continuous Monitoring</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>IV Therapy</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Critical Care Team</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Specialized Equipment</li>
+                        </ul>
+                        
+                        <div class="text-center mt-4">
+                            <span class="badge bg-warning fs-6">Specialized Care</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Wheelchair Transport -->
+            <div class="col-lg-6">
+                <div class="card h-100 border-0 shadow-lg">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-wheelchair-move text-info fs-1"></i>
+                        </div>
+                        <h3 class="card-title text-center mb-4">Wheelchair Transport</h3>
+                        <p class="card-text mb-4">Dedicated wheelchair-accessible vehicles for patients with mobility challenges, ensuring safe and comfortable transportation.</p>
+                        
+                        <h5>Features:</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Wheelchair Securement</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Ramp Access</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Safety Restraints</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Comfortable Seating</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Easy Access</li>
+                        </ul>
+                        
+                        <div class="text-center mt-4">
+                            <span class="badge bg-info fs-6">Accessible</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <!-- Non-Emergency Services -->
-        <div class="row mb-5">
-            <div class="col-lg-8 mx-auto">
-                <div class="card border-0 shadow-lg">
-                    <div class="card-body p-5">
-                        <div class="text-center mb-4">
-                            <i class="fas fa-wheelchair text-primary" style="font-size: 64px;"></i>
-                            <h2 class="fw-bold text-primary mt-3">Non-Emergency Medical Transport</h2>
-                        </div>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <h5><i class="fas fa-calendar-check text-primary me-2"></i>Scheduled Appointments</h5>
-                                <p>Reliable transportation to medical appointments, routine check-ups, and scheduled procedures with comfort and care.</p>
-                            </div>
-                            <div class="col-md-6">
-                                <h5><i class="fas fa-tint text-primary me-2"></i>Dialysis Transport</h5>
-                                <p>Regular, dependable transportation for dialysis patients with specialized equipment and trained staff for comfort and safety.</p>
-                            </div>
-                            <div class="col-md-6">
-                                <h5><i class="fas fa-bed text-primary me-2"></i>Discharge Transport</h5>
-                                <p>Safe transport from hospitals and medical facilities to home or other care facilities with appropriate medical supervision.</p>
-                            </div>
-                            <div class="col-md-6">
-                                <h5><i class="fas fa-user-friends text-primary me-2"></i>Wheelchair Accessible</h5>
-                                <p>Specialized vehicles equipped with wheelchair lifts and securing systems for patients with mobility challenges.</p>
-                            </div>
-                        </div>
-                    </div>
+<!-- Service Areas -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center mb-5">
+                <h2 class="display-5 fw-bold">Service Areas</h2>
+                <p class="lead">We provide medical transportation services throughout the region</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="fas fa-map-marker-alt text-primary fs-1 mb-3"></i>
+                    <h5>Local Transport</h5>
+                    <p>Within city limits and surrounding areas</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="fas fa-road text-primary fs-1 mb-3"></i>
+                    <h5>Inter-City</h5>
+                    <p>Transport between cities and regions</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="fas fa-plane text-primary fs-1 mb-3"></i>
+                    <h5>Long Distance</h5>
+                    <p>Extended transport for specialized care</p>
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <!-- Specialized Services -->
-        <div class="row mb-5">
-            <div class="col-lg-8 mx-auto">
-                <div class="card border-0 shadow-lg">
-                    <div class="card-body p-5">
-                        <div class="text-center mb-4">
-                            <i class="fas fa-heart text-success" style="font-size: 64px;"></i>
-                            <h2 class="fw-bold text-success mt-3">Specialized Care Transport</h2>
-                        </div>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <h5><i class="fas fa-baby text-success me-2"></i>Neonatal Transport</h5>
-                                <p>Specialized transport for newborns and infants requiring intensive care with neonatal-trained personnel and equipment.</p>
-                            </div>
-                            <div class="col-md-6">
-                                <h5><i class="fas fa-brain text-success me-2"></i>Critical Care Transport</h5>
-                                <p>Advanced life support transport for critically ill patients requiring intensive monitoring and specialized medical interventions.</p>
-                            </div>
-                            <div class="col-md-6">
-                                <h5><i class="fas fa-lungs text-success me-2"></i>Ventilator Transport</h5>
-                                <p>Transport for patients requiring mechanical ventilation with trained respiratory therapists and ventilator-equipped ambulances.</p>
-                            </div>
-                            <div class="col-md-6">
-                                <h5><i class="fas fa-syringe text-success me-2"></i>Medication Management</h5>
-                                <p>Specialized transport for patients requiring continuous medication administration and monitoring during transport.</p>
-                            </div>
-                        </div>
-                    </div>
+<!-- Call to Action -->
+<section class="section-padding bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-5 fw-bold mb-3">Need Medical Transport?</h2>
+                <p class="lead mb-4">Contact us today to schedule your transportation or for emergency services</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="{{ url_for('booking') }}" class="btn btn-light btn-lg">
+                        <i class="fas fa-calendar-plus me-2"></i>Book Now
+                    </a>
+                    <a href="tel:555-123-4567" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-phone me-2"></i>Call (555) 123-4567
+                    </a>
                 </div>
-            </div>
-        </div>
-
-        <!-- Service Areas -->
-        <div class="bg-light p-5 rounded">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold">Service Areas</h2>
-                <p class="lead">We provide medical transport services throughout the greater Houston area</p>
-            </div>
-            <div class="row g-3">
-                <div class="col-md-3 text-center">
-                    <i class="fas fa-map-marker-alt text-primary"></i>
-                    <strong>Stafford</strong>
-                </div>
-                <div class="col-md-3 text-center">
-                    <i class="fas fa-map-marker-alt text-primary"></i>
-                    <strong>Houston</strong>
-                </div>
-                <div class="col-md-3 text-center">
-                    <i class="fas fa-map-marker-alt text-primary"></i>
-                    <strong>Sugar Land</strong>
-                </div>
-                <div class="col-md-3 text-center">
-                    <i class="fas fa-map-marker-alt text-primary"></i>
-                    <strong>Missouri City</strong>
-                </div>
-                <div class="col-md-3 text-center">
-                    <i class="fas fa-map-marker-alt text-primary"></i>
-                    <strong>Pearland</strong>
-                </div>
-                <div class="col-md-3 text-center">
-                    <i class="fas fa-map-marker-alt text-primary"></i>
-                    <strong>Katy</strong>
-                </div>
-                <div class="col-md-3 text-center">
-                    <i class="fas fa-map-marker-alt text-primary"></i>
-                    <strong>Richmond</strong>
-                </div>
-                <div class="col-md-3 text-center">
-                    <i class="fas fa-map-marker-alt text-primary"></i>
-                    <strong>Bellaire</strong>
-                </div>
-            </div>
-        </div>
-
-        <div class="text-center mt-5">
-            <h3 class="fw-bold mb-3">Need Medical Transport?</h3>
-            <p class="mb-4">Contact us today to schedule your transport or for emergency services</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="{{ url_for('booking') }}" class="btn btn-primary btn-lg">
-                    <i class="fas fa-calendar-plus me-2"></i>Book Transport
-                </a>
-                <a href="tel:281-690-1274" class="btn btn-danger btn-lg">
-                    <i class="fas fa-phone me-2"></i>Emergency: 281-690-1274
-                </a>
             </div>
         </div>
     </div>

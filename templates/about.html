@@ -3,34 +3,132 @@
 {% block title %}About Us - First Med Care EMS{% endblock %}
 
 {% block content %}
-<section class="py-5 mt-5">
+<!-- Page Header -->
+<section class="hero-section" style="padding: 80px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold">About First Med Care EMS</h1>
+                <p class="lead">Your trusted partner in medical transportation</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Content -->
+<section class="section-padding">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <div class="text-center mb-5">
-                    <h1 class="fw-bold">About First Med Care EMS</h1>
-                    <p class="lead">Dedicated to providing exceptional medical transport services to our community</p>
+                    <h2 class="display-5 fw-bold mb-4">Our Mission</h2>
+                    <p class="lead">To provide safe, reliable, and compassionate medical transportation services that prioritize patient care and comfort while ensuring timely and professional service delivery.</p>
                 </div>
-
-                <div class="row align-items-center mb-5">
+                
+                <div class="row g-5">
                     <div class="col-lg-6">
-                        <img src="https://images1.showcase.com/i2/qZ7Zb7-xQ1haDOILdXeDINmykt_0KKjQ-5Lrp0cUyzE/115/image.jpg" alt="First Med EMS Team" class="img-fluid rounded">
+                        <h3 class="h2 mb-4">Who We Are</h3>
+                        <p class="mb-4">First Med Care EMS is a leading medical transportation company dedicated to providing exceptional care and service to our patients. With years of experience in the healthcare industry, we understand the critical importance of reliable medical transport.</p>
+                        
+                        <p class="mb-4">Our team consists of certified paramedics, emergency medical technicians, and medical professionals who are committed to maintaining the highest standards of patient care and safety.</p>
+                        
+                        <h4 class="mb-3">Our Values</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Patient Safety First</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Compassionate Care</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Professional Excellence</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Reliability & Trust</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Continuous Improvement</li>
+                        </ul>
                     </div>
+                    
                     <div class="col-lg-6">
-                        <h2 class="fw-bold mb-3">Our Mission</h2>
-                        <p>At First Med Care EMS, our mission is to provide safe, reliable, and compassionate medical transportation services to patients in Stafford, TX and surrounding communities. We are committed to delivering the highest standard of pre-hospital care while ensuring comfort and dignity for every patient we serve.</p>
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Medical Team" class="img-fluid rounded shadow">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-                <div class="text-center mb-5">
-                    <h2 class="fw-bold mb-3">Why Choose First Med Care EMS?</h2>
-                    <p class="mb-4">First Med Care EMS is dedicated to providing exceptional medical transport services with a focus on safety, reliability, and compassionate care. Our experienced team and modern equipment ensure the best possible outcomes for every patient.</p>
+<!-- Our Team -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center mb-5">
+                <h2 class="display-5 fw-bold">Our Team</h2>
+                <p class="lead">Experienced professionals dedicated to your care</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card text-center border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <i class="fas fa-user-md text-primary fs-1 mb-3"></i>
+                        <h5>Certified Paramedics</h5>
+                        <p>Advanced life support certified professionals with extensive emergency medical experience.</p>
+                    </div>
                 </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card text-center border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <i class="fas fa-ambulance text-primary fs-1 mb-3"></i>
+                        <h5>Emergency Technicians</h5>
+                        <p>Skilled EMTs trained in patient assessment, basic life support, and emergency procedures.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card text-center border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <i class="fas fa-heart text-primary fs-1 mb-3"></i>
+                        <h5>Medical Professionals</h5>
+                        <p>Registered nurses and medical professionals specializing in critical care transport.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-                <div class="text-center">
-                    <h2 class="fw-bold mb-3">Serving the Stafford Community</h2>
-                    <p class="mb-4">Located in the heart of Stafford, Texas, we are strategically positioned to provide rapid response times to medical emergencies and scheduled transports throughout the greater Houston area. Our state-of-the-art ambulances are equipped with the latest medical technology to ensure the best possible care during transport.</p>
-                    <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">Get in Touch</a>
+<!-- Certifications -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-5 fw-bold mb-4">Licensed & Certified</h2>
+                <p class="lead mb-5">We maintain the highest standards of certification and compliance</p>
+                
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <i class="fas fa-certificate text-primary fs-1 mb-3"></i>
+                            <h6>State Licensed</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt text-primary fs-1 mb-3"></i>
+                            <h6>Fully Insured</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <i class="fas fa-award text-primary fs-1 mb-3"></i>
+                            <h6>Certified Staff</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <i class="fas fa-check-circle text-primary fs-1 mb-3"></i>
+                            <h6>Compliance Ready</h6>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

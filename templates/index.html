@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block title %}First Med Care EMS - Professional Medical Transport Services{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h1>Professional Medical Transport</h1>
+                <p>Reliable, safe, and compassionate medical transportation services available 24/7. Your health and safety are our top priority.</p>
+                <a href="{{ url_for('booking') }}" class="btn btn-primary btn-lg me-3">
+                    <i class="fas fa-calendar-plus me-2"></i>Book Now
+                </a>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-phone me-2"></i>Call Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center mb-5">
+                <h2 class="display-4 fw-bold">Our Services</h2>
+                <p class="lead">Comprehensive medical transportation solutions for every need</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card service-card h-100 text-center p-4">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h4>Emergency Transport</h4>
+                    <p>24/7 emergency medical transportation with fully equipped ambulances and trained paramedics.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card h-100 text-center p-4">
+                    <div class="service-icon">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <h4>Non-Emergency Transport</h4>
+                    <p>Safe and comfortable transportation for medical appointments, dialysis, and other healthcare needs.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card h-100 text-center p-4">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h4>Critical Care Transport</h4>
+                    <p>Specialized transport for patients requiring intensive care during transportation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="display-5 fw-bold mb-4">Why Choose First Med Care EMS?</h2>
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-shield-alt text-primary fs-2"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Licensed & Insured</h5>
+                                <p>Fully licensed medical transport company with comprehensive insurance coverage.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-clock text-primary fs-2"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>24/7 Availability</h5>
+                                <p>Round-the-clock service for emergencies and scheduled medical appointments.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-user-md text-primary fs-2"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Professional Staff</h5>
+                                <p>Certified paramedics and medical professionals with years of experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-car text-primary fs-2"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Modern Fleet</h5>
+                                <p>Well-maintained vehicles equipped with the latest medical technology.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Medical Transport" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Emergency Contact -->
+<section class="section-padding bg-danger text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-5 fw-bold mb-3">Medical Emergency?</h2>
+                <p class="lead mb-4">Don't wait - call us immediately for emergency medical transport</p>
+                <a href="tel:555-123-4567" class="btn btn-light btn-lg">
+                    <i class="fas fa-phone me-2"></i>Call (555) 123-4567
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Info -->
+<section class="contact-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-5 fw-bold mb-4">Get In Touch</h2>
+                <p class="lead mb-4">Ready to book your medical transport? Contact us today!</p>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <i class="fas fa-phone text-primary fs-1 mb-3"></i>
+                            <h5>Call Us</h5>
+                            <p>(555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <i class="fas fa-envelope text-primary fs-1 mb-3"></i>
+                            <h5>Email Us</h5>
+                            <p>info@firstmedcareems.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <i class="fas fa-map-marker-alt text-primary fs-1 mb-3"></i>
+                            <h5>Visit Us</h5>
+                            <p>123 Medical Center Dr<br>City, State 12345</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
