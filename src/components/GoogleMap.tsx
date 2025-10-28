@@ -1,7 +1,5 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-
 interface GoogleMapProps {
   center: {
     lat: number;
@@ -12,56 +10,20 @@ interface GoogleMapProps {
 }
 
 export default function GoogleMap({ center, zoom = 15, className = '' }: GoogleMapProps) {
-  const mapRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const initMap = async () => {
-      if (!mapRef.current) return;
-
-      try {
-        const { Loader } = await import('@googlemaps/js-api-loader');
-        
-        const loader = new Loader({
-          apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '',
-          version: 'weekly',
-          libraries: ['places']
-        });
-
-        const { Map } = await loader.importLibrary('maps');
-        const { Marker } = await loader.importLibrary('marker');
-
-        const map = new Map(mapRef.current, {
-          center,
-          zoom,
-          mapTypeId: 'roadmap',
-          styles: [
-            {
-              featureType: 'poi',
-              elementType: 'labels',
-              stylers: [{ visibility: 'off' }]
-            }
-          ]
-        });
-
-        new Marker({
-          position: center,
-          map,
-          title: 'First Med Care EMS',
-          animation: google.maps.Animation.DROP
-        });
-      } catch (error) {
-        console.error('Error loading Google Maps:', error);
-      }
-    };
-
-    initMap();
-  }, [center, zoom]);
-
   return (
     <div 
-      ref={mapRef} 
-      className={`w-full h-96 rounded-lg shadow-lg ${className}`}
+      className={`w-full h-96 rounded-lg shadow-lg bg-gray-200 flex items-center justify-center ${className}`}
       style={{ minHeight: '300px' }}
-    />
+    >
+      <div className="text-center">
+        <div className="text-gray-600 mb-2 text-4xl">📍</div>
+        <div className="text-lg font-semibold text-gray-700 mb-2">First Med Care EMS</div>
+        <div className="text-sm text-gray-600 mb-1">11104 W Airport Blvd, Suite 138</div>
+        <div className="text-sm text-gray-600">Stafford, TX 77477</div>
+        <div className="text-xs text-gray-500 mt-2">
+          Google Maps will load here with your API key
+        </div>
+      </div>
+    </div>
   );
 }
