@@ -2,8 +2,15 @@
 
 import Link from 'next/link';
 import { Ambulance, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import GoogleMap from '@/components/GoogleMap';
 
 export default function Contact() {
+  // First Med Care EMS location coordinates
+  const businessLocation = {
+    lat: 29.6161, // Stafford, TX latitude
+    lng: -95.5577 // Stafford, TX longitude
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -64,8 +71,8 @@ export default function Contact() {
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
                     <p className="text-gray-600 mb-2">Emergency & General Inquiries</p>
-                    <a href="tel:555-123-4567" className="text-red-600 font-semibold text-lg hover:text-red-700">
-                      (555) 123-4567
+                    <a href="tel:281-690-1274" className="text-red-600 font-semibold text-lg hover:text-red-700">
+                      (281) 690-1274
                     </a>
                   </div>
                 </div>
@@ -75,8 +82,8 @@ export default function Contact() {
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
                     <p className="text-gray-600 mb-2">General Information & Support</p>
-                    <a href="mailto:info@firstmedcareems.com" className="text-red-600 font-semibold hover:text-red-700">
-                      info@firstmedcareems.com
+                    <a href="mailto:24hourserviceems@gmail.com" className="text-red-600 font-semibold hover:text-red-700">
+                      24hourserviceems@gmail.com
                     </a>
                   </div>
                 </div>
@@ -87,9 +94,9 @@ export default function Contact() {
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
                     <p className="text-gray-600 mb-2">Our Main Office</p>
                     <address className="text-gray-600 not-italic">
-                      123 Medical Center Drive<br />
-                      Suite 100<br />
-                      City, State 12345
+                      11104 W Airport Blvd<br />
+                      Suite 138<br />
+                      Stafford, TX 77477
                     </address>
                   </div>
                 </div>
@@ -223,40 +230,59 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Service Areas */}
+      {/* Location Map */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Service Areas</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Find Us</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide medical transportation services throughout the region, 
-              ensuring reliable coverage for all our patients.
+              Visit our main office at 11104 W Airport Blvd, Suite 138, Stafford, TX 77477
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <MapPin className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Primary Service Area</h3>
-              <p className="text-gray-600">
-                City and surrounding metropolitan area within 30 miles of our main facility.
-              </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <GoogleMap 
+                center={businessLocation} 
+                zoom={15}
+                className="w-full h-96"
+              />
             </div>
             
-            <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <MapPin className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Extended Coverage</h3>
-              <p className="text-gray-600">
-                Regional coverage up to 50 miles for specialized and critical care transports.
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <MapPin className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Emergency Response</h3>
-              <p className="text-gray-600">
-                24/7 emergency response within our primary service area with rapid response times.
-              </p>
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Service Areas</h3>
+                <p className="text-gray-600 mb-6">
+                  We provide medical transportation services throughout the Houston metropolitan area 
+                  and surrounding regions, ensuring reliable coverage for all our patients.
+                </p>
+              </div>
+              
+              <div className="grid gap-6">
+                <div className="bg-white rounded-lg shadow-lg p-6">
+                  <MapPin className="h-8 w-8 text-red-600 mb-3" />
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">Primary Service Area</h4>
+                  <p className="text-gray-600">
+                    Houston and surrounding areas within 30 miles of our Stafford facility.
+                  </p>
+                </div>
+                
+                <div className="bg-white rounded-lg shadow-lg p-6">
+                  <MapPin className="h-8 w-8 text-red-600 mb-3" />
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">Extended Coverage</h4>
+                  <p className="text-gray-600">
+                    Regional coverage up to 50 miles for specialized and critical care transports.
+                  </p>
+                </div>
+                
+                <div className="bg-white rounded-lg shadow-lg p-6">
+                  <MapPin className="h-8 w-8 text-red-600 mb-3" />
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">Emergency Response</h4>
+                  <p className="text-gray-600">
+                    24/7 emergency response within our primary service area with rapid response times.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

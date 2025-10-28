@@ -2,8 +2,15 @@
 
 import Link from 'next/link';
 import { Phone, Ambulance, Heart, User, Clock, Shield, Car } from 'lucide-react';
+import GoogleMap from '@/components/GoogleMap';
 
 export default function Home() {
+  // First Med Care EMS location coordinates
+  const businessLocation = {
+    lat: 29.6161, // Stafford, TX latitude
+    lng: -95.5577 // Stafford, TX longitude
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -61,12 +68,12 @@ export default function Home() {
             >
               Book Now
             </Link>
-            <a 
-              href="tel:555-123-4567" 
-              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition duration-300"
-            >
-              Call (555) 123-4567
-            </a>
+                 <a 
+                   href="tel:281-690-1274" 
+                   className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition duration-300"
+                 >
+                   Call (281) 690-1274
+                 </a>
           </div>
         </div>
       </section>
@@ -179,13 +186,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Medical Emergency?</h2>
           <p className="text-xl mb-8">Don't wait - call us immediately for emergency medical transport</p>
-          <a 
-            href="tel:555-123-4567" 
-            className="bg-white text-red-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition duration-300 inline-flex items-center"
-          >
-            <Phone className="h-6 w-6 mr-2" />
-            Call (555) 123-4567
-          </a>
+               <a 
+                 href="tel:281-690-1274" 
+                 className="bg-white text-red-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition duration-300 inline-flex items-center"
+               >
+                 <Phone className="h-6 w-6 mr-2" />
+                 Call (281) 690-1274
+               </a>
         </div>
       </section>
 
@@ -198,31 +205,86 @@ export default function Home() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <Phone className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Call Us</h3>
-              <p className="text-xl text-gray-600">(555) 123-4567</p>
+                 <div className="text-center">
+                   <Phone className="h-16 w-16 text-blue-600 mx-auto mb-4" />
+                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Call Us</h3>
+                   <p className="text-xl text-gray-600">(281) 690-1274</p>
+                 </div>
+            
+                 <div className="text-center">
+                   <div className="h-16 w-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                     <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                     </svg>
+                   </div>
+                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Email Us</h3>
+                   <p className="text-xl text-gray-600">24hourserviceems@gmail.com</p>
+                 </div>
+            
+                 <div className="text-center">
+                   <div className="h-16 w-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                     <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                     </svg>
+                   </div>
+                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Visit Us</h3>
+                   <p className="text-xl text-gray-600">11104 W Airport Blvd, Suite 138<br />Stafford, TX 77477</p>
+                 </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Location Map */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Visit Our Location</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Located at 11104 W Airport Blvd, Suite 138, Stafford, TX 77477
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <GoogleMap 
+                center={businessLocation} 
+                zoom={15}
+                className="w-full h-96"
+              />
             </div>
             
-            <div className="text-center">
-              <div className="h-16 w-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Get Directions</h3>
+                <p className="text-gray-600 mb-6">
+                  We're conveniently located near Houston's major medical centers and 
+                  easily accessible from all major highways.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Email Us</h3>
-              <p className="text-xl text-gray-600">info@firstmedcareems.com</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="h-16 w-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+              
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <Phone className="h-6 w-6 text-red-600 mr-3" />
+                  <div>
+                    <p className="font-semibold text-gray-900">Call for Directions</p>
+                    <a href="tel:281-690-1274" className="text-red-600 hover:text-red-700">
+                      (281) 690-1274
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-center">
+                  <svg className="h-6 w-6 text-red-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <div>
+                    <p className="font-semibold text-gray-900">Address</p>
+                    <p className="text-gray-600">11104 W Airport Blvd, Suite 138<br />Stafford, TX 77477</p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Visit Us</h3>
-              <p className="text-xl text-gray-600">123 Medical Center Dr<br />City, State 12345</p>
             </div>
           </div>
         </div>
@@ -245,23 +307,23 @@ export default function Home() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
               <div className="space-y-2 text-gray-400">
-                <p className="flex items-center">
-                  <Phone className="h-4 w-4 mr-2" />
-                  (555) 123-4567
-                </p>
-                <p className="flex items-center">
-                  <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  info@firstmedcareems.com
-                </p>
-                <p className="flex items-center">
-                  <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  123 Medical Center Dr, City, State 12345
-                </p>
+                     <p className="flex items-center">
+                       <Phone className="h-4 w-4 mr-2" />
+                       (281) 690-1274
+                     </p>
+                     <p className="flex items-center">
+                       <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                       </svg>
+                       24hourserviceems@gmail.com
+                     </p>
+                     <p className="flex items-center">
+                       <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                       </svg>
+                       11104 W Airport Blvd, Suite 138, Stafford, TX 77477
+                     </p>
               </div>
             </div>
             
