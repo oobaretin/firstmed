@@ -52,6 +52,12 @@
       "namedRegex": "^/api/booking(?:/)?$"
     },
     {
+      "page": "/api/test",
+      "regex": "^/api/test(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/test(?:/)?$"
+    },
+    {
       "page": "/booking",
       "regex": "^/booking(?:/)?$",
       "routeKeys": {},
