@@ -1,0 +1,13 @@
+{
+  "name": "firstmed-ems",
+  "version": "1.0.0",
+  "description": "First Med Care EMS - Medical Transport Booking System",
+  "main": "index.py",
+  "scripts": {
+    "start": "python index.py"
+  },
+  "dependencies": {},
+  "engines": {
+    "python": "3.9"
+  }
+}
