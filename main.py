@@ -2,24 +2,33 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 import smtplib
 import os
+import logging
 from datetime import datetime
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-app.secret_key = 'your-secret-key-here'
+app.secret_key = os.getenv('SECRET_KEY', 'your-secret-key-here')
 
 def send_booking_email(booking_data):
     """Send booking confirmation email"""
     try:
         # Email configuration
-        smtp_server = "smtp.gmail.com"
-        smtp_port = 587
-        sender_email = "24hourserviceems@gmail.com"
+        smtp_server = os.getenv('SMTP_SERVER', 'smtp.gmail.com')
+        smtp_port = int(os.getenv('SMTP_PORT', '587'))
+        sender_email = os.getenv('SENDER_EMAIL', '24hourserviceems@gmail.com')
         sender_password = os.getenv('EMAIL_PASSWORD')
         
         if not sender_password:
-            print("EMAIL_PASSWORD not found in environment variables")
+            logger.warning("EMAIL_PASSWORD not found in environment variables")
             return False
         
         # Create message
@@ -140,11 +149,11 @@ def send_booking_email(booking_data):
             server.login(sender_email, sender_password)
             server.send_message(msg)
         
-        print(f"Booking email sent successfully for {booking_data['name']}")
+        logger.info(f"Booking email sent successfully for {booking_data['name']}")
         return True
         
     except Exception as e:
-        print(f"Failed to send email: {str(e)}")
+        logger.error(f"Failed to send email: {str(e)}")
         return False
 
 @app.route('/')
@@ -202,4 +211,9 @@ def contact():
     return render_template('contact.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    host = os.getenv('HOST', '0.0.0.0')
+    port = int(os.getenv('PORT', '5000'))
+    debug = os.getenv('DEBUG', 'True').lower() == 'true'
+    
+    logger.info(f"Starting First Med Care EMS application on {host}:{port}")
+    app.run(host=host, port=port, debug=debug)
