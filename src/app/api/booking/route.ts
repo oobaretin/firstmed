@@ -14,12 +14,24 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Check if environment variables are set
+    if (!process.env.SENDER_EMAIL || !process.env.EMAIL_PASSWORD) {
+      console.error('Missing environment variables:', {
+        SENDER_EMAIL: !!process.env.SENDER_EMAIL,
+        EMAIL_PASSWORD: !!process.env.EMAIL_PASSWORD
+      });
+      return NextResponse.json(
+        { success: false, message: 'Email service not configured. Please contact support.' },
+        { status: 500 }
+      );
+    }
+
     // Create email transporter
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.SENDER_EMAIL || 'your-email@gmail.com',
-        pass: process.env.EMAIL_PASSWORD || 'your-app-password'
+        user: process.env.SENDER_EMAIL,
+        pass: process.env.EMAIL_PASSWORD
       }
     });
 
@@ -48,7 +60,7 @@ First Med Care EMS Team
 
     // Send email
     await transporter.sendMail({
-      from: process.env.SENDER_EMAIL || 'your-email@gmail.com',
+      from: process.env.SENDER_EMAIL,
       to: email,
       subject: 'Booking Confirmation - First Med Care EMS',
       text: emailContent
@@ -56,8 +68,8 @@ First Med Care EMS Team
 
     // Also send notification to business email
     await transporter.sendMail({
-      from: process.env.SENDER_EMAIL || 'your-email@gmail.com',
-      to: process.env.SENDER_EMAIL || 'your-email@gmail.com',
+      from: process.env.SENDER_EMAIL,
+      to: process.env.ADMIN_EMAIL || process.env.SENDER_EMAIL,
       subject: 'New Booking Request - First Med Care EMS',
       text: `
 New booking request received:
