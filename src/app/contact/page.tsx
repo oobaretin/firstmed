@@ -2,14 +2,8 @@
 
 import Link from 'next/link';
 import { Ambulance, Phone, Mail, MapPin, Clock } from 'lucide-react';
-import GoogleMap from '@/components/GoogleMap';
 
 export default function Contact() {
-  // First Med Care EMS location coordinates
-  const businessLocation = {
-    lat: 29.6161, // Stafford, TX latitude
-    lng: -95.5577 // Stafford, TX longitude
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -221,72 +215,15 @@ export default function Contact() {
           <h2 className="text-4xl font-bold mb-4">Medical Emergency?</h2>
           <p className="text-xl mb-8">Don't wait - call us immediately for emergency medical transport</p>
           <a 
-            href="tel:555-123-4567" 
+            href="tel:281-690-1274" 
             className="bg-white text-red-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition duration-300 inline-flex items-center"
           >
             <Phone className="h-6 w-6 mr-2" />
-            Call (555) 123-4567
+            Call (281) 690-1274
           </a>
         </div>
       </section>
 
-      {/* Location Map */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Find Us</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Visit our main office at 11104 W Airport Blvd, Suite 138, Stafford, TX 77477
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <GoogleMap 
-                center={businessLocation} 
-                zoom={15}
-                className="w-full h-96"
-              />
-            </div>
-            
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Service Areas</h3>
-                <p className="text-gray-600 mb-6">
-                  We provide medical transportation services throughout the Houston metropolitan area 
-                  and surrounding regions, ensuring reliable coverage for all our patients.
-                </p>
-              </div>
-              
-              <div className="grid gap-6">
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <MapPin className="h-8 w-8 text-red-600 mb-3" />
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Primary Service Area</h4>
-                  <p className="text-gray-600">
-                    Houston and surrounding areas within 30 miles of our Stafford facility.
-                  </p>
-                </div>
-                
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <MapPin className="h-8 w-8 text-red-600 mb-3" />
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Extended Coverage</h4>
-                  <p className="text-gray-600">
-                    Regional coverage up to 50 miles for specialized and critical care transports.
-                  </p>
-                </div>
-                
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <MapPin className="h-8 w-8 text-red-600 mb-3" />
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Emergency Response</h4>
-                  <p className="text-gray-600">
-                    24/7 emergency response within our primary service area with rapid response times.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
@@ -316,9 +253,9 @@ export default function Contact() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
               <div className="space-y-2 text-gray-400">
-                <p>Phone: (555) 123-4567</p>
-                <p>Email: info@firstmedcareems.com</p>
-                <p>Address: 123 Medical Center Dr<br />City, State 12345</p>
+                <p>Phone: (281) 690-1274</p>
+                <p>Email: 24hourserviceems@gmail.com</p>
+                <p>Address: 11104 W Airport Blvd<br />Suite 138, Stafford, TX 77477</p>
               </div>
             </div>
           </div>
