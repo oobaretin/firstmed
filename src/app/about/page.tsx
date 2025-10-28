@@ -11,7 +11,11 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Ambulance className="h-8 w-8 text-red-600 mr-2" />
+              <img 
+                src="/A3BDBCB4-1A57-42CF-BA51-B0801CD9A26A-removebg-preview.png" 
+                alt="First Med Care EMS Logo" 
+                className="h-8 w-8 mr-2"
+              />
               <span className="text-xl font-bold text-gray-900">First Med Care EMS</span>
             </div>
             <div className="hidden md:block">
@@ -200,7 +204,11 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center mb-4">
-                <Ambulance className="h-8 w-8 text-red-600 mr-2" />
+                <img 
+                  src="/A3BDBCB4-1A57-42CF-BA51-B0801CD9A26A-removebg-preview.png" 
+                  alt="First Med Care EMS Logo" 
+                  className="h-8 w-8 mr-2"
+                />
                 <span className="text-xl font-bold">First Med Care EMS</span>
               </div>
               <p className="text-gray-400">

@@ -72,7 +72,11 @@ export default function Booking() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center">
-              <Ambulance className="h-8 w-8 text-red-600 mr-2" />
+              <img 
+                src="/A3BDBCB4-1A57-42CF-BA51-B0801CD9A26A-removebg-preview.png" 
+                alt="First Med Care EMS Logo" 
+                className="h-8 w-8 mr-2"
+              />
               <span className="text-xl font-bold text-gray-900">First Med Care EMS</span>
             </Link>
             <div className="hidden md:block">
