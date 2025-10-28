@@ -15,7 +15,7 @@ export default function Home() {
               <img 
                 src="/A3BDBCB4-1A57-42CF-BA51-B0801CD9A26A-removebg-preview.png" 
                 alt="First Med Care EMS Logo" 
-                className="h-8 w-8 mr-2"
+                className="h-12 w-12 mr-3"
               />
               <span className="text-xl font-bold text-gray-900">First Med Care EMS</span>
             </div>
