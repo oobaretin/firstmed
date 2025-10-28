@@ -217,3 +217,6 @@ if __name__ == '__main__':
     
     logger.info(f"Starting First Med Care EMS application on {host}:{port}")
     app.run(host=host, port=port, debug=debug)
+else:
+    # For Vercel deployment
+    logger.info("First Med Care EMS application loaded for Vercel")
