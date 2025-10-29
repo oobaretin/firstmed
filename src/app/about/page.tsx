@@ -243,7 +243,7 @@ export default function About() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
               <div className="space-y-2 text-gray-400">
-                <p>Phone: (555) 123-4567</p>
+                <p>Phone: (281) 690-1274</p>
                 <p>Email: info@firstmedcareems.com</p>
                 <p>Address: 123 Medical Center Dr<br />City, State 12345</p>
               </div>
