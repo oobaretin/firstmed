@@ -39,7 +39,7 @@ export default function Services() {
               <img 
                 src="/A3BDBCB4-1A57-42CF-BA51-B0801CD9A26A-removebg-preview.png" 
                 alt="First Med Care EMS Logo" 
-                className="h-16 w-16 sm:h-20 sm:w-20 mr-3 sm:mr-4"
+                className="h-20 w-20 sm:h-24 sm:w-24 mr-4 sm:mr-5"
               />
               <span className="text-xl sm:text-2xl font-black text-gray-900">First Med Care EMS</span>
             </div>
