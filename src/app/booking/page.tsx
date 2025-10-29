@@ -23,12 +23,7 @@ export default function Booking() {
 
   const handleMenuToggle = () => {
     try {
-      console.log('Menu toggle clicked! Current state:', isMobileMenuOpen);
-      setIsMobileMenuOpen(prev => {
-        const newState = !prev;
-        console.log('Changing from', prev, 'to', newState);
-        return newState;
-      });
+      setIsMobileMenuOpen(prev => !prev);
     } catch (error) {
       console.error('Error toggling menu:', error);
     }
@@ -39,7 +34,6 @@ export default function Booking() {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Element;
       if (isMobileMenuOpen && !target.closest('.mobile-menu-container')) {
-        console.log('Clicking outside menu, closing...');
         setIsMobileMenuOpen(false);
       }
     };
@@ -99,7 +93,7 @@ export default function Booking() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b mobile-menu-container">
+      <nav className="bg-white shadow-sm border-b mobile-menu-container sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center">
@@ -152,56 +146,38 @@ export default function Booking() {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
             <div className="px-4 py-2 space-y-1">
-              <div className="text-xs text-green-600 mb-2 p-2 bg-green-100 rounded font-semibold">
-                ✓ Mobile Menu is Working! State: {isMobileMenuOpen.toString()}
-              </div>
               <Link 
                 href="/" 
                 className="block px-4 py-3 text-gray-500 hover:text-red-600 hover:bg-gray-50 rounded transition-colors"
-                onClick={() => {
-                  console.log('Home clicked, closing menu');
-                  setIsMobileMenuOpen(false);
-                }}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link 
                 href="/about" 
                 className="block px-4 py-3 text-gray-500 hover:text-red-600 hover:bg-gray-50 rounded transition-colors"
-                onClick={() => {
-                  console.log('About clicked, closing menu');
-                  setIsMobileMenuOpen(false);
-                }}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 About
               </Link>
               <Link 
                 href="/services" 
                 className="block px-4 py-3 text-gray-500 hover:text-red-600 hover:bg-gray-50 rounded transition-colors"
-                onClick={() => {
-                  console.log('Services clicked, closing menu');
-                  setIsMobileMenuOpen(false);
-                }}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Services
               </Link>
               <Link 
                 href="/booking" 
                 className="block px-4 py-3 text-gray-900 bg-gray-100 rounded font-semibold"
-                onClick={() => {
-                  console.log('Booking clicked, closing menu');
-                  setIsMobileMenuOpen(false);
-                }}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Booking
               </Link>
               <Link 
                 href="/contact" 
                 className="block px-4 py-3 text-gray-500 hover:text-red-600 hover:bg-gray-50 rounded transition-colors"
-                onClick={() => {
-                  console.log('Contact clicked, closing menu');
-                  setIsMobileMenuOpen(false);
-                }}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
               </Link>
