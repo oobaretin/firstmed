@@ -43,8 +43,6 @@ export default function About() {
                 className="h-12 w-12 sm:h-16 sm:w-16 mr-2 sm:mr-4"
               />
               <span className="text-lg sm:text-xl font-bold text-gray-900">First Med Care EMS</span>
-              {/* Debug indicator - remove this later */}
-              <span className="md:hidden ml-2 text-xs text-red-500">Menu: {isMobileMenuOpen ? 'OPEN' : 'CLOSED'}</span>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">

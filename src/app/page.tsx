@@ -40,9 +40,9 @@ export default function Home() {
               <img 
                 src="/A3BDBCB4-1A57-42CF-BA51-B0801CD9A26A-removebg-preview.png" 
                 alt="First Med Care EMS Logo" 
-                className="h-12 w-12 sm:h-16 sm:w-16 mr-2 sm:mr-4"
+                className="h-16 w-16 sm:h-20 sm:w-20 mr-3 sm:mr-4"
               />
-              <span className="text-lg sm:text-xl font-bold text-gray-900">First Med Care EMS</span>
+              <span className="text-xl sm:text-2xl font-black text-gray-900">First Med Care EMS</span>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
