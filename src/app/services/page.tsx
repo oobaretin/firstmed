@@ -48,8 +48,8 @@ export default function Services() {
             Our Services
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Comprehensive medical transportation solutions designed to meet every patient's needs. 
-            From emergency response to scheduled appointments, we're here for you.
+            Comprehensive medical transportation solutions designed to meet every patient&apos;s needs. 
+            From emergency response to scheduled appointments, we&apos;re here for you.
           </p>
         </div>
       </section>
@@ -237,7 +237,7 @@ export default function Services() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Services?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're committed to providing the highest quality medical transportation with 
+              We&apos;re committed to providing the highest quality medical transportation with 
               features that set us apart from the competition.
             </p>
           </div>

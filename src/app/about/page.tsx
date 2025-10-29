@@ -122,7 +122,7 @@ export default function About() {
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto px-4">
             Your trusted partner in medical transportation for over 15 years. 
-            We're committed to providing safe, reliable, and compassionate care.
+                We&apos;re committed to providing safe, reliable, and compassionate care.
           </p>
         </div>
       </section>
@@ -141,7 +141,7 @@ export default function About() {
               <p className="text-lg text-gray-600 mb-6">
                 Our team of certified paramedics, EMTs, and medical professionals brings decades 
                 of combined experience to every transport. We understand that medical emergencies 
-                and appointments can be stressful, which is why we're dedicated to making the 
+                and appointments can be stressful, which is why we&apos;re dedicated to making the 
                 transportation aspect as smooth and comfortable as possible.
               </p>
               <p className="text-lg text-gray-600">
@@ -167,7 +167,7 @@ export default function About() {
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Mission & Values</h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-              We're driven by our core values and commitment to excellence in medical transportation
+                We&apos;re driven by our core values and commitment to excellence in medical transportation
             </p>
           </div>
           
@@ -179,7 +179,7 @@ export default function About() {
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Compassion</h3>
               <p className="text-sm sm:text-base text-gray-600">
                 We treat every patient with dignity, respect, and genuine care, understanding 
-                that each transport represents a person's health and well-being.
+                that each transport represents a person&apos;s health and well-being.
               </p>
             </div>
             

@@ -130,7 +130,7 @@ export default function Home() {
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose First Med Care EMS?</h2>
               <p className="text-xl text-gray-600 mb-8">
-                We're committed to providing the highest quality medical transportation services with a focus on patient safety and comfort.
+                We&apos;re committed to providing the highest quality medical transportation services with a focus on patient safety and comfort.
               </p>
               
               <div className="space-y-6">
@@ -183,7 +183,7 @@ export default function Home() {
       <section className="bg-red-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Medical Emergency?</h2>
-          <p className="text-xl mb-8">Don't wait - call us immediately for emergency medical transport</p>
+          <p className="text-xl mb-8">Don&apos;t wait - call us immediately for emergency medical transport</p>
                <a 
                  href="tel:281-690-1274" 
                  className="bg-white text-red-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition duration-300 inline-flex items-center"

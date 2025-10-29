@@ -49,7 +49,7 @@ export default function Contact() {
             Contact Us
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Get in touch with First Med Care EMS. We're here to answer your questions 
+            Get in touch with First Med Care EMS. We&apos;re here to answer your questions 
             and provide the medical transportation services you need.
           </p>
         </div>
@@ -217,7 +217,7 @@ export default function Contact() {
       <section className="bg-red-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Medical Emergency?</h2>
-          <p className="text-xl mb-8">Don't wait - call us immediately for emergency medical transport</p>
+          <p className="text-xl mb-8">Don&apos;t wait - call us immediately for emergency medical transport</p>
           <a 
             href="tel:281-690-1274" 
             className="bg-white text-red-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition duration-300 inline-flex items-center"
