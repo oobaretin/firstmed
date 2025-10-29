@@ -459,7 +459,7 @@ export default function Booking() {
             <div className="text-center">
               <Mail className="h-16 w-16 text-blue-600 mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Email Support</h3>
-              <p className="text-xl text-gray-600">info@firstmedcareems.com</p>
+              <p className="text-xl text-gray-600">24hourserviceems@gmail.com</p>
               <p className="text-sm text-gray-500">Response within 2 hours</p>
             </div>
             

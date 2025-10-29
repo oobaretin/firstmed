@@ -322,8 +322,8 @@ export default function About() {
               <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
               <div className="space-y-2 text-gray-400">
                 <p>Phone: (281) 690-1274</p>
-                <p>Email: info@firstmedcareems.com</p>
-                <p>Address: 123 Medical Center Dr<br />City, State 12345</p>
+                <p>Email: 24hourserviceems@gmail.com</p>
+                <p>Address: 11104 W Airport Blvd<br />Suite 138, Stafford, TX 77477</p>
               </div>
             </div>
           </div>
