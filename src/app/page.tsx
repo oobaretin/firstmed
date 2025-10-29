@@ -37,12 +37,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
-              <img 
-                src="/A3BDBCB4-1A57-42CF-BA51-B0801CD9A26A-removebg-preview.png" 
-                alt="First Med Care EMS Logo" 
-                className="h-20 w-20 sm:h-24 sm:w-24 mr-4 sm:mr-5"
-              />
-              <span className="text-xl sm:text-2xl font-bold text-gray-900 michroma-regular">First Med Care EMS</span>
+              <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+                <img 
+                  src="/A3BDBCB4-1A57-42CF-BA51-B0801CD9A26A-removebg-preview.png" 
+                  alt="First Med Care EMS Logo" 
+                  className="h-20 w-20 sm:h-24 sm:w-24 mr-4 sm:mr-5"
+                />
+                <span className="text-xl sm:text-2xl font-bold text-gray-900 michroma-regular">First Med Care EMS</span>
+              </Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
