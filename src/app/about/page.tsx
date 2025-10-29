@@ -7,6 +7,11 @@ import { useState } from 'react';
 export default function About() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const toggleMobileMenu = () => {
+    console.log('Toggling menu from', isMobileMenuOpen, 'to', !isMobileMenuOpen);
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -20,6 +25,8 @@ export default function About() {
                 className="h-12 w-12 sm:h-16 sm:w-16 mr-2 sm:mr-4"
               />
               <span className="text-lg sm:text-xl font-bold text-gray-900">First Med Care EMS</span>
+              {/* Debug indicator - remove this later */}
+              <span className="md:hidden ml-2 text-xs text-red-500">Menu: {isMobileMenuOpen ? 'OPEN' : 'CLOSED'}</span>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
@@ -42,8 +49,12 @@ export default function About() {
             </div>
             <div className="md:hidden">
               <button 
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-gray-500 hover:text-red-600 focus:outline-none focus:text-red-600"
+                onClick={toggleMobileMenu}
+                onTouchStart={toggleMobileMenu}
+                className="text-gray-500 hover:text-red-600 focus:outline-none focus:text-red-600 p-2 -m-2 active:bg-gray-100 rounded"
+                type="button"
+                aria-label="Toggle mobile menu"
+                style={{ touchAction: 'manipulation' }}
               >
                 {isMobileMenuOpen ? (
                   <X className="h-6 w-6" />
@@ -61,6 +72,8 @@ export default function About() {
         {isMobileMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              {/* Debug info - remove this later */}
+              <div className="text-xs text-gray-500 mb-2">Menu is open: {isMobileMenuOpen.toString()}</div>
               <Link 
                 href="/" 
                 className="text-gray-500 hover:text-red-600 block px-3 py-2 rounded-md text-base font-medium"
