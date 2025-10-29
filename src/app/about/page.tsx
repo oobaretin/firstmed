@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Ambulance, User, Heart, Shield, Clock, Car, Users, Stethoscope, Truck, Headphones, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function About() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,10 +12,25 @@ export default function About() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (isMobileMenuOpen && !target.closest('.mobile-menu-container')) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => document.removeEventListener('mousedown', handleClickOutside);
+    }
+  }, [isMobileMenuOpen]);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
+      <nav className="bg-white shadow-sm border-b mobile-menu-container">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
@@ -49,12 +64,15 @@ export default function About() {
             </div>
             <div className="md:hidden">
               <button 
-                onClick={toggleMobileMenu}
-                onTouchStart={toggleMobileMenu}
-                className="text-gray-500 hover:text-red-600 focus:outline-none focus:text-red-600 p-2 -m-2 active:bg-gray-100 rounded"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  console.log('Button clicked! Current state:', isMobileMenuOpen);
+                  setIsMobileMenuOpen(!isMobileMenuOpen);
+                }}
+                className="text-gray-500 hover:text-red-600 focus:outline-none focus:text-red-600 p-2 -m-2 active:bg-gray-100 rounded cursor-pointer"
                 type="button"
                 aria-label="Toggle mobile menu"
-                style={{ touchAction: 'manipulation' }}
               >
                 {isMobileMenuOpen ? (
                   <X className="h-6 w-6" />
@@ -70,42 +88,57 @@ export default function About() {
         
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+          <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50">
+            <div className="px-4 py-2 space-y-1">
               {/* Debug info - remove this later */}
-              <div className="text-xs text-gray-500 mb-2">Menu is open: {isMobileMenuOpen.toString()}</div>
+              <div className="text-xs text-gray-500 mb-2 p-2 bg-gray-100 rounded">Menu is open: {isMobileMenuOpen.toString()}</div>
               <Link 
                 href="/" 
-                className="text-gray-500 hover:text-red-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-gray-500 hover:text-red-600 hover:bg-gray-50 block px-4 py-3 rounded-md text-base font-medium transition-colors"
+                onClick={() => {
+                  console.log('Home clicked, closing menu');
+                  setIsMobileMenuOpen(false);
+                }}
               >
                 Home
               </Link>
               <Link 
                 href="/about" 
-                className="text-gray-900 hover:text-red-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-gray-900 bg-gray-50 hover:text-red-600 hover:bg-gray-100 block px-4 py-3 rounded-md text-base font-medium transition-colors"
+                onClick={() => {
+                  console.log('About clicked, closing menu');
+                  setIsMobileMenuOpen(false);
+                }}
               >
                 About
               </Link>
               <Link 
                 href="/services" 
-                className="text-gray-500 hover:text-red-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-gray-500 hover:text-red-600 hover:bg-gray-50 block px-4 py-3 rounded-md text-base font-medium transition-colors"
+                onClick={() => {
+                  console.log('Services clicked, closing menu');
+                  setIsMobileMenuOpen(false);
+                }}
               >
                 Services
               </Link>
               <Link 
                 href="/booking" 
-                className="text-gray-500 hover:text-red-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-gray-500 hover:text-red-600 hover:bg-gray-50 block px-4 py-3 rounded-md text-base font-medium transition-colors"
+                onClick={() => {
+                  console.log('Booking clicked, closing menu');
+                  setIsMobileMenuOpen(false);
+                }}
               >
                 Booking
               </Link>
               <Link 
                 href="/contact" 
-                className="text-gray-500 hover:text-red-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-gray-500 hover:text-red-600 hover:bg-gray-50 block px-4 py-3 rounded-md text-base font-medium transition-colors"
+                onClick={() => {
+                  console.log('Contact clicked, closing menu');
+                  setIsMobileMenuOpen(false);
+                }}
               >
                 Contact
               </Link>
