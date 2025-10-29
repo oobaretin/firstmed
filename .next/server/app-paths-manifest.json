@@ -3,6 +3,7 @@
   "/_not-found/page": "app/_not-found/page.js",
   "/about/page": "app/about/page.js",
   "/api/booking-simple/route": "app/api/booking-simple/route.js",
+  "/api/booking-test/route": "app/api/booking-test/route.js",
   "/api/booking/route": "app/api/booking/route.js",
   "/api/hello/route": "app/api/hello/route.js",
   "/api/test/route": "app/api/test/route.js",

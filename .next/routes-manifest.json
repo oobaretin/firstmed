@@ -58,6 +58,12 @@
       "namedRegex": "^/api/booking\\-simple(?:/)?$"
     },
     {
+      "page": "/api/booking-test",
+      "regex": "^/api/booking\\-test(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/booking\\-test(?:/)?$"
+    },
+    {
       "page": "/api/hello",
       "regex": "^/api/hello(?:/)?$",
       "routeKeys": {},
