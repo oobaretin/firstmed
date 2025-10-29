@@ -1,22 +1,53 @@
 'use client';
 
 import Link from 'next/link';
-import { Ambulance, User, Heart, Phone, Clock, Shield, Car, Stethoscope } from 'lucide-react';
+import { Ambulance, User, Heart, Phone, Clock, Shield, Car, Stethoscope, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export default function Services() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    try {
+      console.log('Menu toggle clicked! Current state:', isMobileMenuOpen);
+      setIsMobileMenuOpen(prev => {
+        const newState = !prev;
+        console.log('Changing from', prev, 'to', newState);
+        return newState;
+      });
+    } catch (error) {
+      console.error('Error toggling menu:', error);
+    }
+  };
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (isMobileMenuOpen && !target.closest('.mobile-menu-container')) {
+        console.log('Clicking outside menu, closing...');
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => document.removeEventListener('mousedown', handleClickOutside);
+    }
+  }, [isMobileMenuOpen]);
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
+      <nav className="bg-white shadow-sm border-b mobile-menu-container">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <img 
                 src="/A3BDBCB4-1A57-42CF-BA51-B0801CD9A26A-removebg-preview.png" 
                 alt="First Med Care EMS Logo" 
-                className="h-16 w-16 mr-4"
+                className="h-12 w-12 sm:h-16 sm:w-16 mr-2 sm:mr-4"
               />
-              <span className="text-xl font-bold text-gray-900">First Med Care EMS</span>
+              <span className="text-lg sm:text-xl font-bold text-gray-900">First Med Care EMS</span>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
@@ -37,8 +68,85 @@ export default function Services() {
                 </Link>
               </div>
             </div>
+            <div className="md:hidden">
+              <button 
+                onClick={handleMenuToggle}
+                className="text-gray-500 hover:text-red-600 p-2 bg-gray-100 rounded border-2 border-gray-300"
+                type="button"
+                style={{ minWidth: '44px', minHeight: '44px' }}
+              >
+                {isMobileMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                )}
+              </button>
+            </div>
           </div>
         </div>
+        
+        {/* Mobile menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
+            <div className="px-4 py-2 space-y-1">
+              <div className="text-xs text-green-600 mb-2 p-2 bg-green-100 rounded font-semibold">
+                ✓ Mobile Menu is Working! State: {isMobileMenuOpen.toString()}
+              </div>
+              <Link 
+                href="/" 
+                className="block px-4 py-3 text-gray-500 hover:text-red-600 hover:bg-gray-50 rounded transition-colors"
+                onClick={() => {
+                  console.log('Home clicked, closing menu');
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                Home
+              </Link>
+              <Link 
+                href="/about" 
+                className="block px-4 py-3 text-gray-500 hover:text-red-600 hover:bg-gray-50 rounded transition-colors"
+                onClick={() => {
+                  console.log('About clicked, closing menu');
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                About
+              </Link>
+              <Link 
+                href="/services" 
+                className="block px-4 py-3 text-gray-900 bg-gray-100 rounded font-semibold"
+                onClick={() => {
+                  console.log('Services clicked, closing menu');
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                Services
+              </Link>
+              <Link 
+                href="/booking" 
+                className="block px-4 py-3 text-gray-500 hover:text-red-600 hover:bg-gray-50 rounded transition-colors"
+                onClick={() => {
+                  console.log('Booking clicked, closing menu');
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                Booking
+              </Link>
+              <Link 
+                href="/contact" 
+                className="block px-4 py-3 text-gray-500 hover:text-red-600 hover:bg-gray-50 rounded transition-colors"
+                onClick={() => {
+                  console.log('Contact clicked, closing menu');
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
