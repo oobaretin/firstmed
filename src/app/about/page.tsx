@@ -14,9 +14,9 @@ export default function About() {
               <img 
                 src="/A3BDBCB4-1A57-42CF-BA51-B0801CD9A26A-removebg-preview.png" 
                 alt="First Med Care EMS Logo" 
-                className="h-16 w-16 mr-4"
+                className="h-12 w-12 sm:h-16 sm:w-16 mr-2 sm:mr-4"
               />
-              <span className="text-xl font-bold text-gray-900">First Med Care EMS</span>
+              <span className="text-lg sm:text-xl font-bold text-gray-900">First Med Care EMS</span>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
@@ -37,6 +37,13 @@ export default function About() {
                 </Link>
               </div>
             </div>
+            <div className="md:hidden">
+              <button className="text-gray-500 hover:text-red-600 focus:outline-none focus:text-red-600">
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </nav>
@@ -44,10 +51,10 @@ export default function About() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-gray-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">
             About First Med Care EMS
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto px-4">
             Your trusted partner in medical transportation for over 15 years. 
             We're committed to providing safe, reliable, and compassionate care.
           </p>
@@ -59,7 +66,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
               <p className="text-lg text-gray-600 mb-6">
                 Founded in 2008, First Med Care EMS began with a simple mission: to provide 
                 exceptional medical transportation services that prioritize patient safety and comfort. 
@@ -92,41 +99,41 @@ export default function About() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Mission & Values</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Mission & Values</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               We're driven by our core values and commitment to excellence in medical transportation
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition duration-300">
-              <div className="w-20 h-20 bg-red-100 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Heart className="h-10 w-10 text-red-600" />
+            <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8 text-center hover:shadow-xl transition duration-300">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-red-100 rounded-full mx-auto mb-4 sm:mb-6 flex items-center justify-center">
+                <Heart className="h-8 w-8 sm:h-10 sm:w-10 text-red-600" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Compassion</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Compassion</h3>
+              <p className="text-sm sm:text-base text-gray-600">
                 We treat every patient with dignity, respect, and genuine care, understanding 
                 that each transport represents a person's health and well-being.
               </p>
             </div>
             
-            <div className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition duration-300">
-              <div className="w-20 h-20 bg-blue-100 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Shield className="h-10 w-10 text-blue-600" />
+            <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8 text-center hover:shadow-xl transition duration-300">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-blue-100 rounded-full mx-auto mb-4 sm:mb-6 flex items-center justify-center">
+                <Shield className="h-8 w-8 sm:h-10 sm:w-10 text-blue-600" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Safety First</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Safety First</h3>
+              <p className="text-sm sm:text-base text-gray-600">
                 Patient safety is our top priority. We maintain the highest standards of 
                 vehicle maintenance, staff training, and safety protocols.
               </p>
             </div>
             
-            <div className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition duration-300">
-              <div className="w-20 h-20 bg-green-100 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Clock className="h-10 w-10 text-green-600" />
+            <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8 text-center hover:shadow-xl transition duration-300">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-100 rounded-full mx-auto mb-4 sm:mb-6 flex items-center justify-center">
+                <Clock className="h-8 w-8 sm:h-10 sm:w-10 text-green-600" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Reliability</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Reliability</h3>
+              <p className="text-sm sm:text-base text-gray-600">
                 You can count on us to be on time, every time. We understand the importance 
                 of punctuality in medical care and transportation.
               </p>
@@ -139,41 +146,41 @@ export default function About() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Team</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Team</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Meet the dedicated professionals who make First Med Care EMS the trusted choice for medical transportation
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
-              <div className="w-24 h-24 bg-red-100 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Stethoscope className="h-12 w-12 text-red-600" />
+            <div className="text-center bg-white rounded-lg shadow-lg p-6 sm:p-8 hover:shadow-xl transition duration-300">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-red-100 rounded-full mx-auto mb-4 sm:mb-6 flex items-center justify-center">
+                <Stethoscope className="h-10 w-10 sm:h-12 sm:w-12 text-red-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Certified Paramedics</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Certified Paramedics</h3>
+              <p className="text-sm sm:text-base text-gray-600">
                 Our paramedics are fully certified and regularly trained in the latest 
                 medical protocols and emergency procedures.
               </p>
             </div>
             
-            <div className="text-center bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
-              <div className="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Truck className="h-12 w-12 text-blue-600" />
+            <div className="text-center bg-white rounded-lg shadow-lg p-6 sm:p-8 hover:shadow-xl transition duration-300">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-blue-100 rounded-full mx-auto mb-4 sm:mb-6 flex items-center justify-center">
+                <Truck className="h-10 w-10 sm:h-12 sm:w-12 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Professional Drivers</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Professional Drivers</h3>
+              <p className="text-sm sm:text-base text-gray-600">
                 Our drivers are specially trained in medical transport safety and 
                 defensive driving techniques.
               </p>
             </div>
             
-            <div className="text-center bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
-              <div className="w-24 h-24 bg-green-100 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Headphones className="h-12 w-12 text-green-600" />
+            <div className="text-center bg-white rounded-lg shadow-lg p-6 sm:p-8 hover:shadow-xl transition duration-300">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-green-100 rounded-full mx-auto mb-4 sm:mb-6 flex items-center justify-center">
+                <Headphones className="h-10 w-10 sm:h-12 sm:w-12 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Support Staff</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Support Staff</h3>
+              <p className="text-sm sm:text-base text-gray-600">
                 Our administrative and support team ensures smooth operations and 
                 excellent customer service.
               </p>
