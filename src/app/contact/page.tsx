@@ -353,7 +353,8 @@ export default function Contact() {
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 First Med Care EMS. All rights reserved.</p>
+            <p>&copy; 2025 First Med Care EMS. All rights reserved.</p>
+            <p className="mt-2 text-sm">Designed by <span className="text-white font-semibold">TenQ Designs LLC</span></p>
           </div>
         </div>
       </footer>
