@@ -95,14 +95,14 @@ export default function Booking() {
       {/* Navigation */}
       <nav className="bg-white shadow-sm border-b mobile-menu-container sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-20">
             <Link href="/" className="flex items-center">
               <img 
                 src="/A3BDBCB4-1A57-42CF-BA51-B0801CD9A26A-removebg-preview.png" 
                 alt="First Med Care EMS Logo" 
-                className="h-12 w-12 sm:h-16 sm:w-16 mr-2 sm:mr-4"
+                className="h-16 w-16 sm:h-20 sm:w-20 mr-3 sm:mr-4"
               />
-              <span className="text-lg sm:text-xl font-bold text-gray-900">First Med Care EMS</span>
+              <span className="text-xl sm:text-2xl font-black text-gray-900">First Med Care EMS</span>
             </Link>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
