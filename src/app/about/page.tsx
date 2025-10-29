@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Ambulance, User, Heart, Shield, Clock, Car } from 'lucide-react';
+import { Ambulance, User, Heart, Shield, Clock, Car, Users, Stethoscope, Truck, Headphones } from 'lucide-react';
 
 export default function About() {
   return (
@@ -99,8 +99,10 @@ export default function About() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <Heart className="h-16 w-16 text-red-600 mx-auto mb-4" />
+            <div className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition duration-300">
+              <div className="w-20 h-20 bg-red-100 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <Heart className="h-10 w-10 text-red-600" />
+              </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Compassion</h3>
               <p className="text-gray-600">
                 We treat every patient with dignity, respect, and genuine care, understanding 
@@ -108,8 +110,10 @@ export default function About() {
               </p>
             </div>
             
-            <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <Shield className="h-16 w-16 text-blue-600 mx-auto mb-4" />
+            <div className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition duration-300">
+              <div className="w-20 h-20 bg-blue-100 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <Shield className="h-10 w-10 text-blue-600" />
+              </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Safety First</h3>
               <p className="text-gray-600">
                 Patient safety is our top priority. We maintain the highest standards of 
@@ -117,8 +121,10 @@ export default function About() {
               </p>
             </div>
             
-            <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <Clock className="h-16 w-16 text-green-600 mx-auto mb-4" />
+            <div className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition duration-300">
+              <div className="w-20 h-20 bg-green-100 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <Clock className="h-10 w-10 text-green-600" />
+              </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Reliability</h3>
               <p className="text-gray-600">
                 You can count on us to be on time, every time. We understand the importance 
@@ -140,33 +146,33 @@ export default function About() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <User className="h-16 w-16 text-gray-600" />
+            <div className="text-center bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+              <div className="w-24 h-24 bg-red-100 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <Stethoscope className="h-12 w-12 text-red-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Certified Paramedics</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Certified Paramedics</h3>
               <p className="text-gray-600">
                 Our paramedics are fully certified and regularly trained in the latest 
                 medical protocols and emergency procedures.
               </p>
             </div>
             
-            <div className="text-center">
-              <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Car className="h-16 w-16 text-gray-600" />
+            <div className="text-center bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+              <div className="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <Truck className="h-12 w-12 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Professional Drivers</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Professional Drivers</h3>
               <p className="text-gray-600">
                 Our drivers are specially trained in medical transport safety and 
                 defensive driving techniques.
               </p>
             </div>
             
-            <div className="text-center">
-              <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Heart className="h-16 w-16 text-gray-600" />
+            <div className="text-center bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+              <div className="w-24 h-24 bg-green-100 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <Headphones className="h-12 w-12 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Support Staff</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Support Staff</h3>
               <p className="text-gray-600">
                 Our administrative and support team ensures smooth operations and 
                 excellent customer service.
@@ -239,6 +245,7 @@ export default function About() {
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2024 First Med Care EMS. All rights reserved.</p>
+            <p className="mt-2 text-sm">Designed by <span className="text-white font-semibold">TenQ Designs LLC</span></p>
           </div>
         </div>
       </footer>
