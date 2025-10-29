@@ -42,7 +42,7 @@ export default function About() {
                 alt="First Med Care EMS Logo" 
                 className="h-20 w-20 sm:h-24 sm:w-24 mr-4 sm:mr-5"
               />
-              <span className="text-xl sm:text-2xl font-bold text-gray-900">First Med Care EMS</span>
+              <span className="text-xl sm:text-2xl font-bold text-gray-900 michroma-regular">First Med Care EMS</span>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
