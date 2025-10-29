@@ -79,9 +79,9 @@ export default function About() {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                alt="Medical Team" 
-                className="rounded-lg shadow-lg"
+                src="/CC62A920-775C-4A60-92BC-CCDEB0711D52.jpeg" 
+                alt="First Med Care EMS Team - Our Story" 
+                className="w-full h-auto rounded-lg shadow-lg"
               />
             </div>
           </div>
